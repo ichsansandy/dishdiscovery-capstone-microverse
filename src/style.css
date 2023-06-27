@@ -20,7 +20,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2% 0 2%;
+  padding: 12px 2%;
   background-color: var(--accent-color);
   height: 10vh;
 }
@@ -122,7 +122,7 @@ section[data-visible='false'] {
 }
 
 .home-title {
-  color: color-mix(in sRGB, var(--primary-color) 95%, black);
+  color: var(--text-color);
 }
 
 .home-section,
