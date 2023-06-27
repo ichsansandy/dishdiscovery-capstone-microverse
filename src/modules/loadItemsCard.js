@@ -1,5 +1,5 @@
 const loadItemCard = (items) => {
-  const container = document.querySelector('.home-section');
+  const container = document.querySelector('.home-wrapper');
 
   function card(item) {
     return `<div class="card small-rounded">
@@ -9,7 +9,9 @@ const loadItemCard = (items) => {
                     <div class="card-button small-rounded">Like</div>
                     <div class="card-button small-rounded">Comment</div>
                 </div>                  
-            </div>`;
+            </div>
+            <dialog></dialog>
+            `;
   }
   container.innerHTML = items.map((item) => card(item)).join('');
 };

@@ -10,6 +10,7 @@ spaExperience();
 const totalItemsContainer = document.querySelector('.total-meals');
 
 const array = [];
+
 ids.forEach((id) => {
   fecthingItem(id).then((data) => {
     array.push(data.meals[0]);
