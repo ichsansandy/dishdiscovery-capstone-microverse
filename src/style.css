@@ -27,7 +27,7 @@ nav {
 
 h1 {
   color: var(--primary-color);
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .hamburger {
@@ -121,10 +121,6 @@ section[data-visible='false'] {
   display: none;
 }
 
-.home-title {
-  color: var(--text-color);
-}
-
 .home-section,
 .meals-section,
 .about-section,
@@ -174,6 +170,7 @@ section[data-visible='false'] {
   display: flex;
   gap: 5px;
   justify-content: center;
+  flex-wrap: wrap;
   width: 80%;
   font-size: 0.5rem;
 }
@@ -232,6 +229,10 @@ footer .last > div:nth-child(2) {
 }
 
 @media only screen and (min-width: 768px) {
+  h1 {
+    font-size: xx-large;
+  }
+
   .hamburger {
     display: none;
   }
@@ -240,25 +241,25 @@ footer .last > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
   }
 
   .desktop-nav-list li {
     list-style: none;
   }
 
-  .desktop-nav-list li a {
+  .desktop-nav-list li:hover,
+  .desktop-nav-list li:hover > a,
+  .desktop-nav-list li:focus {
+    background-color: var(--background-color);
+    color: var(--text-color);
     text-decoration: none;
-    color: #fff;
     cursor: pointer;
   }
 
-  .desktop-nav-list li a:hover {
-    color: var(--primary-color);
-  }
-
-  .desktop-nav-list li a:focus {
-    color: var(--primary-color);
+  .desktop-nav-list li a {
+    color: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
   }
 
   .home-wrapper {
@@ -295,6 +296,10 @@ footer .last > div:nth-child(2) {
 }
 
 /* utility class */
+.section-title {
+  color: var(--text-color);
+}
+
 .small-rounded {
   border-radius: 8px;
 }
