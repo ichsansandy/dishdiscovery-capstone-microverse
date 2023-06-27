@@ -6,6 +6,8 @@ import loadItemCard from './modules/loadItemsCard.js';
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
 const X_BUTTON = document.querySelector('.close-x');
+const parmodal = document.querySelector('.parmodal');
+
 const ids = [53027, 52963, 53026, 53029, 53065, 52858, 52913, 52786, 53000, 52930, 52903, 53059];
 
 HAMBURGER.addEventListener('click', () => {
@@ -31,4 +33,10 @@ ids.forEach((id) => {
     loadItemCard(array);
     totalItemsContainer.innerHTML = ` ( ${array.length} )`;
   });
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === parmodal) {
+    parmodal.style.display = 'none';
+  }
 });

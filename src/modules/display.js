@@ -1,3 +1,6 @@
+// import postComments from './postcommints.js';
+// import getComments from './getcomments.js';
+
 const display = (items) => {
   const COMMENTS = document.querySelectorAll('.comment');
   COMMENTS.forEach((comment) => {
@@ -45,8 +48,12 @@ const display = (items) => {
                 </div>
               </div>
             `;
+      // });
+      const close = document.querySelector('#close');
+      close.addEventListener('click', () => {
+        parmodal.style.display = 'none';
+      });
     });
   });
 };
-
 export default display;
