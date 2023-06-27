@@ -170,6 +170,14 @@ section[data-visible='false'] {
   justify-content: center;
 }
 
+.info-container {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  width: 80%;
+  font-size: 0.5rem;
+}
+
 .card-button-container {
   display: flex;
   flex-direction: column;
@@ -181,6 +189,10 @@ section[data-visible='false'] {
   padding: 5px 15px;
   background-color: var(--background-color);
   border: 2px solid black;
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-button:hover {
@@ -263,7 +275,12 @@ footer .last > div:nth-child(2) {
     width: 80%;
   }
 
+  .info-container {
+    font-size: 0.8rem;
+  }
+
   .card-button {
+    font-size: 0.8rem;
     width: 50%;
   }
 
@@ -280,4 +297,8 @@ footer .last > div:nth-child(2) {
 /* utility class */
 .small-rounded {
   border-radius: 8px;
+}
+
+.text-center {
+  text-align: center;
 }
