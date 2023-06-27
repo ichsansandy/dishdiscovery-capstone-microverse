@@ -373,6 +373,7 @@ footer .last > div:nth-child(2) {
   .mobile-menu.active {
     display: none;
   }
+
   .home-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;
