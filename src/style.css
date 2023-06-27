@@ -247,6 +247,12 @@ footer .last > div:nth-child(2) {
     list-style: none;
   }
 
+  .desktop-nav-list li a {
+    color: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+  }
+
   .desktop-nav-list li:hover,
   .desktop-nav-list li:hover > a,
   .desktop-nav-list li:focus {
@@ -256,15 +262,15 @@ footer .last > div:nth-child(2) {
     cursor: pointer;
   }
 
-  .desktop-nav-list li a {
-    color: #fff;
-    padding: 20px 25px;
-    border-radius: 12px;
+  .about-section,
+  .meals-section {
+    height: 72vh;
   }
 
   .home-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;
+    margin-bottom: 30px;
   }
 
   .card-title {
