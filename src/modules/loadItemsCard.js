@@ -11,7 +11,7 @@ const loadItemCard = (items) => {
                   <div id="comments-${item.idMeal}" class="comments">0 comments</div>
                 </div>
                 <div class="card-button-container">
-                    <div  class="card-button small-rounded">Add Like</div>
+                    <div  class="card-button small-rounded" data-id="${item.idMeal}">Add Like</div>
                     <div  class="card-button small-rounded">View all comments</div>
                 </div>                  
             </div>
