@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dish Discovery</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-fast-food-1851561-1569286.png" type="image/png" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>The Meals DB</h1>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="desktop-nav-list">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Meals<span class="total-meals"></span></a></li>
-                <li><a href="#">Ingredients</a></li>
-            </ul>
-        </nav>
-        <div class="mobile-menu">
-            <div class="close-x">x</div>
-            <ul class="mobile-nav-list">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Meals</a></li>
-                <li><a href="#">Ingredients</a></li>
-            </ul>
-        </div>
+      <nav>
+        <h1>Dish Discovery</h1>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="desktop-nav-list">
+          <li><a class="links" data-page="home">Home</a></li>
+          <li>
+            <a class="links" data-page="meals">Meals<span class="total-meals"></span></a>
+          </li>
+          <li><a class="links" data-page="about">About</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <div class="close-x">x</div>
+        <ul class="mobile-nav-list">
+          <li><a class="links" data-page="home">Home</a></li>
+          <li><a class="links" data-page="meals">Meals</a></li>
+          <li><a class="links" data-page="about">About</a></li>
+        </ul>
+      </div>
     </header>
     <main>
-        
-    </main>
-
-    <footer class="footer pd-y" id="footer" style="display: grid;">
-        <div class="container">
-          <div class="last">
-    <div class="">©2023 Charry. All rights reserved.</div>
-    <div class="">powered By : Abd elhakim And Ichsan</div>
-          <div class="">Privacy Policy | Terms &amp; Conditions</div>
-    </div>
+      <section class="home-section" data-visible="true">
+        <div class="card small-rounded">
+          <div class="card-title small-rounded">Teriyaki Chicken Casserole</div>
+          <img class="small-rounded" src="https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg" width="80%" />
+          <div class="card-button-container">
+            <div class="card-button small-rounded">Like</div>
+            <div class="card-button small-rounded">Comment</div>
+          </div>
         </div>
-      </footer>
-
-</body>
+      </section>
+      <section class="meals-section" data-visible="false">This is meals section</section>
+      <section class="about-section" data-visible="false">This is about section</section>
+    </main>
+    <footer class="footer pd-y" id="footer" style="display: grid">
+      <div class="container">
+        <div class="last">
+          <div class="">©2023 Copyright. All rights reserved.</div>
+          <div class="">powered By : Abd elhakim And Ichsan</div>
+          <div class="">Privacy Policy | Terms &amp; Conditions</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
