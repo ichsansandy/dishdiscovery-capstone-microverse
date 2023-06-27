@@ -1,3 +1,5 @@
+import display from './display.js';
+
 const loadItemCard = (items) => {
   const container = document.querySelector('.home-wrapper');
 
@@ -12,13 +14,14 @@ const loadItemCard = (items) => {
                 </div>
                 <div class="card-button-container">
                     <div  class="card-button small-rounded">Add Like</div>
-                    <div  class="card-button small-rounded">View all comments</div>
+                    <div  class="card-button small-rounded comment" data-id="${item.idMeal}">COMMENTS</div>
                 </div>                  
             </div>
             <dialog></dialog>
             `;
   }
   container.innerHTML = items.map((item) => card(item)).join('');
+  display(items);
 };
 
 export default loadItemCard;
