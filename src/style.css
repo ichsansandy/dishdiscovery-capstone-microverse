@@ -140,12 +140,12 @@ section[data-visible='false'] {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  background-color: color-mix(in srgb, var(--background-color) 97%, black);
+  background-color: color-mix(in sRGB, var(--background-color) 97%, black);
   padding: 25px 12px;
 }
 
-.card:hover{
-  background-color: color-mix(in srgb, var(--background-color) 93%, black);
+.card:hover {
+  background-color: color-mix(in sRGB, var(--background-color) 93%, black);
 }
 
 .card-title {
@@ -164,13 +164,13 @@ section[data-visible='false'] {
   gap: 10px;
 }
 
-.card-button{
+.card-button {
   padding: 5px 15px;
   background-color: var(--primary-color);
 }
 
-.card-button:hover{
-  background-color: color-mix(in srgb, var(--background-color) 70%, var(--accent-color));
+.card-button:hover {
+  background-color: color-mix(in sRGB, var(--background-color) 70%, var(--accent-color));
   cursor: pointer;
 }
 
@@ -243,12 +243,12 @@ footer .last > div:nth-child(2) {
     font-size: 1.5rem;
   }
 
-  .card-button-container{
+  .card-button-container {
     flex-direction: row;
     width: 80%;
   }
 
-  .card-button{
+  .card-button {
     width: 50%;
   }
 
