@@ -1,3 +1,5 @@
+import addLikes from './addLikesFunction.js';
+
 const loadItemCard = (items) => {
   const container = document.querySelector('.home-wrapper');
 
@@ -11,7 +13,7 @@ const loadItemCard = (items) => {
                   <div id="comments-${item.idMeal}" class="comments">0 comments</div>
                 </div>
                 <div class="card-button-container">
-                    <div  class="card-button small-rounded" data-id="${item.idMeal}">Add Like</div>
+                    <div  class="card-button small-rounded like-button" data-id="${item.idMeal}">Add Like</div>
                     <div  class="card-button small-rounded">View all comments</div>
                 </div>                  
             </div>
@@ -19,6 +21,15 @@ const loadItemCard = (items) => {
             `;
   }
   container.innerHTML = items.map((item) => card(item)).join('');
+
+  const likeButtons = document.querySelectorAll('.like-button');
+
+  likeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-id');
+      addLikes(id);
+    });
+  });
 };
 
 export default loadItemCard;
