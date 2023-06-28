@@ -465,6 +465,23 @@ footer .last > div:nth-child(2) {
   text-align: center;
 }
 
+#ulc {
+  color: antiquewhite;
+  font-size: 17px;
+  margin: 18px 0;
+  background-color: #5a7f0efa;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.commentBox {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  color: #ffd857;
+  row-gap: 20px;
+  width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .parmodal__modal {
     width: auto;

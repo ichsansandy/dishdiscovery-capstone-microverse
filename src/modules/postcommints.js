@@ -1,6 +1,7 @@
+import APPS_ID from './api.js';
+
 const postComments = async (data) => {
-  fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/D0QfuFSRCj3KMjXfE9c5/comments',
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${APPS_ID}/comments`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -9,7 +10,7 @@ const postComments = async (data) => {
         username: data.username,
         comment: data.comment,
       }),
-    },
-  );
+    });
+  return response;
 };
 export default postComments;
