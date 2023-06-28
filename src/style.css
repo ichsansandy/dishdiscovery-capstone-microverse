@@ -481,7 +481,7 @@ footer .last > div:nth-child(2) {
   color: #ffd857;
   row-gap: 20px;
   width: 100%;
-  }
+}
 
 @media only screen and (max-width: 768px) {
   .parmodal__modal {
