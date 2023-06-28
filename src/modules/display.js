@@ -68,6 +68,8 @@ const display = (items) => {
         x.forEach((item) => {
           showComments.innerHTML += `<div class="commentBox"><div>${item.username}</div><div>${item.comment}</div></div>`;
         });
+      }).catch(() => {
+        showComments.innerHTML += '<div class="commentBox"><span></span><span>No Comments here</span></div>';
       });
     });
   });
