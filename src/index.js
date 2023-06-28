@@ -3,6 +3,7 @@ import spaExperience from './modules/singlePageFunction.js';
 import fecthingItem from './modules/fetchingItem.js';
 import loadItemCard from './modules/loadItemsCard.js';
 import loadLikes from './modules/loadLikes';
+import totalItemsCounter from './modules/totalItemsCounter';
 
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
@@ -24,8 +25,6 @@ X_BUTTON.addEventListener('click', () => {
 
 spaExperience();
 
-const totalItemsContainer = document.querySelector('.total-meals');
-
 let allItem;
 
 const loadAllCard = async () => {
@@ -35,7 +34,7 @@ const loadAllCard = async () => {
 
 await loadAllCard();
 loadItemCard(allItem);
-totalItemsContainer.innerHTML = ` ( ${allItem.length} )`;
+totalItemsCounter(allItem.length);
 await loadLikes();
 
 window.addEventListener('click', (e) => {
