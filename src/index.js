@@ -35,7 +35,7 @@ const loadAllCard = async () => {
 
 await loadAllCard();
 loadItemCard(allItem);
-totalItemsContainer.innerHTML = ` ( ${array.length} )`;
+totalItemsContainer.innerHTML = ` ( ${allItem.length} )`;
 
 const item = await getLikeItem();
 
