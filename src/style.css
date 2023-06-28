@@ -399,6 +399,7 @@ footer .last > div:nth-child(2) {
   .meals-section {
     height: 74vh;
   }
+
   .mobile-menu.active {
     display: none;
   }
