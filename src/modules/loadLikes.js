@@ -14,10 +14,8 @@ export const loadTotalComments = (ids) => {
   ids.forEach(async (id) => {
     const comment = await getComments(id);
 
-    
-      const commentCounter = document.querySelector(`#comments-${id}`);
-      commentCounter.innerHTML = `${comment.length} comments,`;
-    
+    const commentCounter = document.querySelector(`#comments-${id}`);
+    commentCounter.innerHTML = `${comment.length} comments,`;
   });
 };
 

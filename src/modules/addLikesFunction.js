@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
 
 import { postLikeItem } from './fetchingLikesItems.js';
-import loadLikes from './loadLikes.js';
+import {loadLikes} from './loadLikes.js';
 
 const addLikes = (itemId) => {
   postLikeItem({
