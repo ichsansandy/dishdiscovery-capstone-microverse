@@ -1,5 +1,5 @@
-// import postComments from './postcommints.js';
-// import getComments from './getcomments.js';
+import postComments from './postcommints.js';
+import getComments from './getcomments.js';
 
 const display = (items) => {
   const COMMENTS = document.querySelectorAll('.comment');
@@ -31,7 +31,7 @@ const display = (items) => {
                         ></textarea>
                       </div>
                       <div class="formcontrol">
-                        <input type="submit" value="comment" />
+                        <input type="submit" value="comment" id="submit" data-id="${item.idMeal}"/>
                       </div>
                     </form>
                   </div>
@@ -48,10 +48,26 @@ const display = (items) => {
                 </div>
               </div>
             `;
-      // });
       const close = document.querySelector('#close');
       close.addEventListener('click', () => {
         parmodal.style.display = 'none';
+      });
+      const Name = document.querySelector('#name');
+      const Textarea = document.querySelector('#textarea');
+      const submit = document.querySelector('#submit');
+      // const id = submit.getAttribute('data-id');
+      submit.addEventListener('click', (e) => {
+        e.preventDefault();
+        postComments({ item_id: id, username: Name.value, comment: Textarea.value });
+      });
+      const showComments = document.querySelector('#ulc');
+      const Show = getComments(id);
+      let x = [];
+      Show.then((item) => {
+        x = item;
+        x.forEach((item) => {
+          showComments.innerHTML += `<div class="commentBox"><div>${item.username}</div><div>${item.comment}</div></div>`;
+        });
       });
     });
   });

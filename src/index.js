@@ -4,9 +4,9 @@ import fecthingItem from './modules/fetchingItem.js';
 import loadItemCard from './modules/loadItemsCard.js';
 import loadLikes from './modules/loadLikes.js';
 import totalItemsCounter from './modules/totalItemsCounter.js';
-import loadContacts from './modules/loadContact';
-import { getLikeItem } from './modules/fetchingLikesItems';
-import loadRanks from './modules/loadRanks';
+import loadContacts from './modules/loadContact.js';
+import { getLikeItem } from './modules/fetchingLikesItems.js';
+import loadRanks from './modules/loadRanks.js';
 
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
