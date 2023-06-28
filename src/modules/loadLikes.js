@@ -14,7 +14,9 @@ export const loadtotalcomments = async (id) => {
   const comment = await getComments(id);
 
   const commentCounter = document.querySelector(`#comments-${id}`);
-  commentCounter.innerHTML = `${comment.length} comments,`;
+  if (comment.length > 0) {
+    commentCounter.innerHTML = `${comment.length} comments,`;
+  }
 };
 
 export const loadTotalComments = (ids) => {
