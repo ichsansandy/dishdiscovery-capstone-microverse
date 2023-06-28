@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 import { postLikeItem } from './fetchingLikesItems.js';
 
 const addLikes = (itemId) => {
@@ -5,6 +7,11 @@ const addLikes = (itemId) => {
     item_id: itemId,
   }).then((resp) => {
     if (resp.status === 201) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Food liked',
+        text: 'Liked for the food successfully updated',
+      });
       return true;
     }
     return false;

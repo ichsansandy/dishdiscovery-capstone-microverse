@@ -24,15 +24,17 @@ spaExperience();
 
 const totalItemsContainer = document.querySelector('.total-meals');
 
-const array = [];
+let array = [];
+let allItem;
 
-ids.forEach((id) => {
-  fecthingItem(id).then((data) => {
-    array.push(data.meals[0]);
-    loadItemCard(array);
-    totalItemsContainer.innerHTML = ` ( ${array.length} )`;
-  });
-});
+const loadAllCard = async () => {
+  array = await Promise.all(ids.map(async (id) => fecthingItem(id)));
+  allItem = array.map((item) => item.meals[0]);
+};
+
+await loadAllCard();
+loadItemCard(allItem);
+totalItemsContainer.innerHTML = ` ( ${array.length} )`;
 
 const item = await getLikeItem();
 
