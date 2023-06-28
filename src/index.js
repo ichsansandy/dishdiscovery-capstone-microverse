@@ -7,6 +7,8 @@ import { getLikeItem } from './modules/fetchingLikesItems';
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
 const X_BUTTON = document.querySelector('.close-x');
+const parmodal = document.querySelector('.parmodal');
+
 const ids = [53027, 52963, 53026, 53029, 53065, 52858, 52913, 52786, 53000, 52930, 52903, 53059];
 
 HAMBURGER.addEventListener('click', () => {
@@ -24,11 +26,10 @@ spaExperience();
 
 const totalItemsContainer = document.querySelector('.total-meals');
 
-let array = [];
 let allItem;
 
 const loadAllCard = async () => {
-  array = await Promise.all(ids.map(async (id) => fecthingItem(id)));
+  const array = await Promise.all(ids.map(async (id) => fecthingItem(id)));
   allItem = array.map((item) => item.meals[0]);
 };
 
@@ -39,3 +40,9 @@ totalItemsContainer.innerHTML = ` ( ${array.length} )`;
 const item = await getLikeItem();
 
 console.log(item);
+
+window.addEventListener('click', (e) => {
+  if (e.target === parmodal) {
+    parmodal.style.display = 'none';
+  }
+});
