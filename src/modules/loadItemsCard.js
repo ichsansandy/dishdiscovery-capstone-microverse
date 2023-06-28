@@ -10,11 +10,10 @@ const loadItemCard = (items) => {
                 <img class="small-rounded" src="${item.strMealThumb}" width="80%" />
                 <div class="info-container">
                   <div class="likes">${item.strArea},</div>
-                  <div id="likes-${item.idMeal}"class="likes">0 likes,</div>
+                  <div id="likes-${item.idMeal}" class="likes">0 likes,</div>
                   <div id="comments-${item.idMeal}" class="comments">0 comments</div>
                 </div>
                 <div class="card-button-container">
-            
                     <div  class="card-button small-rounded like-button" data-id="${item.idMeal}">Add Like</div>
                     <div  class="card-button small-rounded comment" data-id="${item.idMeal}">COMMENTS</div>
                 </div>                  

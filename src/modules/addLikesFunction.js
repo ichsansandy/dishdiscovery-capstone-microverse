@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2';
 
 import { postLikeItem } from './fetchingLikesItems.js';
+import loadLikes from './loadLikes.js';
 
 const addLikes = (itemId) => {
   postLikeItem({
@@ -11,7 +12,7 @@ const addLikes = (itemId) => {
         icon: 'success',
         title: 'Food liked',
         text: 'Liked for the food successfully updated',
-      });
+      }).then(loadLikes());
       return true;
     }
     return false;
