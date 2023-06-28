@@ -129,15 +129,15 @@ section[data-visible='false'] {
 .home-section,
 .meals-section,
 .about-section,
-.home-wrapper {
+.home-wrapper,
+.rank-wrapper {
   display: grid;
   place-items: center;
   box-sizing: border-box;
-  place-self: center;
 }
 
 /* home section */
-
+.rank-wrapper,
 .home-wrapper {
   grid-template-columns: 1fr 1fr;
   width: 100%;
@@ -397,14 +397,20 @@ footer .last > div:nth-child(2) {
 
   .about-section,
   .meals-section {
-    height: 74vh;
+    height: 84vh;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
   }
 
   .mobile-menu.active {
     display: none;
   }
 
-  .home-wrapper {
+  .home-wrapper,
+  .rank-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;
     margin-bottom: 30px;

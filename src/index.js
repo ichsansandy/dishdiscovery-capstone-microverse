@@ -5,6 +5,8 @@ import loadItemCard from './modules/loadItemsCard.js';
 import loadLikes from './modules/loadLikes.js';
 import totalItemsCounter from './modules/totalItemsCounter.js';
 import loadContacts from './modules/loadContact';
+import { getLikeItem } from './modules/fetchingLikesItems';
+import loadRanks from './modules/loadRanks';
 
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
@@ -38,6 +40,9 @@ loadItemCard(allItem);
 totalItemsCounter(allItem.length);
 await loadLikes();
 loadContacts();
+const likes = await getLikeItem();
+
+loadRanks(likes, allItem);
 
 window.addEventListener('click', (e) => {
   if (e.target === parmodal) {

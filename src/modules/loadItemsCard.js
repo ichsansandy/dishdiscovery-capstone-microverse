@@ -18,7 +18,6 @@ const loadItemCard = (items) => {
                     <div  class="card-button small-rounded comment" data-id="${item.idMeal}">COMMENTS</div>
                 </div>                  
             </div>
-            <dialog></dialog>
             `;
   }
   container.innerHTML = items.map((item) => card(item)).join('');
