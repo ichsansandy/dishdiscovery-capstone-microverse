@@ -2,8 +2,9 @@ import './style.css';
 import spaExperience from './modules/singlePageFunction.js';
 import fecthingItem from './modules/fetchingItem.js';
 import loadItemCard from './modules/loadItemsCard.js';
-import loadLikes from './modules/loadLikes';
-import totalItemsCounter from './modules/totalItemsCounter';
+import loadLikes from './modules/loadLikes.js';
+import totalItemsCounter from './modules/totalItemsCounter.js';
+import loadContacts from './modules/loadContact';
 
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
@@ -36,6 +37,7 @@ await loadAllCard();
 loadItemCard(allItem);
 totalItemsCounter(allItem.length);
 await loadLikes();
+loadContacts();
 
 window.addEventListener('click', (e) => {
   if (e.target === parmodal) {
