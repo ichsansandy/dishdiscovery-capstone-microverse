@@ -1,5 +1,6 @@
 import postComments from './postcommints.js';
 import com from './showComments.js';
+import { loadtotalcomments } from './loadLikes.js';
 
 const display = (items) => {
   const COMMENTS = document.querySelectorAll('.comment');
@@ -61,6 +62,7 @@ const display = (items) => {
         postComments({ item_id: id, username: Name.value, comment: Textarea.value }).then((res) => {
           if (res.status === 201) {
             com(id);
+            loadtotalcomments(id);
           }
         });
       });
