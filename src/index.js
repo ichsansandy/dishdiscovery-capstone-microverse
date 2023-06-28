@@ -2,7 +2,7 @@ import './style.css';
 import spaExperience from './modules/singlePageFunction.js';
 import fecthingItem from './modules/fetchingItem.js';
 import loadItemCard from './modules/loadItemsCard.js';
-import loadLikes from './modules/loadLikes.js';
+import { loadLikes, loadTotalComments } from './modules/loadLikes.js';
 import totalItemsCounter from './modules/totalItemsCounter.js';
 import loadContacts from './modules/loadContact.js';
 import { getLikeItem } from './modules/fetchingLikesItems.js';
@@ -49,3 +49,5 @@ window.addEventListener('click', (e) => {
     parmodal.style.display = 'none';
   }
 });
+
+loadTotalComments(ids);

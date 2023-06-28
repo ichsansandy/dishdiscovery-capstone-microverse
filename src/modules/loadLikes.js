@@ -1,6 +1,7 @@
 import { getLikeItem } from './fetchingLikesItems.js';
+import getComments from './getcomments.js';
 
-const loadLikes = async () => {
+export const loadLikes = async () => {
   const likes = await getLikeItem();
 
   likes.forEach((element) => {
@@ -9,4 +10,19 @@ const loadLikes = async () => {
   });
 };
 
-export default loadLikes;
+export const loadtotalcomments = async (id) => {
+  const comment = await getComments(id);
+
+  const commentCounter = document.querySelector(`#comments-${id}`);
+  commentCounter.innerHTML = `${comment.length} comments,`;
+};
+
+export const loadTotalComments = (ids) => {
+  ids.forEach(async (id) => {
+    await loadtotalcomments(id);
+    // const comment = await getComments(id);
+
+    // const commentCounter = document.querySelector(`#comments-${id}`);
+    // commentCounter.innerHTML = `${comment.length} comments,`;
+  });
+};
