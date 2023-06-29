@@ -56,7 +56,6 @@ const display = (items) => {
       const Name = document.querySelector('#name');
       const Textarea = document.querySelector('#textarea');
       const submit = document.querySelector('#submit');
-      // const id = submit.getAttribute('data-id');
       submit.addEventListener('click', (e) => {
         e.preventDefault();
         postComments({ item_id: id, username: Name.value, comment: Textarea.value }).then((res) => {
