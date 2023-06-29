@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dish Discovery</title>
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-fast-food-1851561-1569286.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/d19de2aa55.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <script type="module">
+      import sweetalert2 from 'https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/+esm';
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>
+          Dish
+          <span>
+            <i class="fa-solid fa-burger"></i>
+          </span>
+          <br />
+          Discovery
+        </h1>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="desktop-nav-list">
+          <li>
+            <a class="links" data-page="home">Meals<span class="total-meals"></span></a>
+          </li>
+          <li>
+            <a class="links" data-page="meals">Rank</a>
+          </li>
+          <li><a class="links" data-page="about">About</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <div class="close-x">x</div>
+        <ul class="mobile-nav-list">
+          <li><a class="links" data-page="home">Home</a></li>
+          <li><a class="links" data-page="meals">Meals</a></li>
+          <li><a class="links" data-page="about">About</a></li>
+        </ul>
+      </div>
+    </header>
+    <main id="all-meals">
+      <div class="parmodal">
+        <div class="parmodal__modal"></div>
+      </div>
+      <section class="home-section" data-visible="true">
+        <h1 class="section-title text-center">Discover your favorite food here</h1>
+        <div class="home-wrapper"></div>
+      </section>
+      <section class="meals-section" data-visible="false">
+        <h1 class="section-title text-center">Most favorite meal goes to</h1>
+        <div class="rank-wrapper"></div>
+      </section>
+      <section class="about-section" data-visible="false">
+        <h1 class="section-title text-center">Contact Information</h1>
+        <p class="text-center">
+          If you have any question or you just want to say "Hello"? <br />
+          You can reach us on
+        </p>
+        <div class="contact-wrapper"></div>
+      </section>
+    </main>
+    <footer class="footer pd-y" id="footer" style="display: grid">
+      <div class="container">
+        <div class="last">
+          <div class="">©2023 Copyright. All rights reserved.</div>
+          <div class="">powered By : Abd elhakim And Ichsan</div>
+          <div class="">Privacy Policy | Terms &amp; Conditions</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
