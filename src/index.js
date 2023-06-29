@@ -1,12 +1,10 @@
 import './style.css';
 import spaExperience from './modules/singlePageFunction.js';
-import fecthingItem from './modules/fetchingItem.js';
 import loadItemCard from './modules/loadItemsCard.js';
 import { loadLikes, loadTotalComments } from './modules/loadLikes.js';
 import totalItemsCounter from './modules/totalItemsCounter.js';
 import loadContacts from './modules/loadContact.js';
-import { getLikeItem } from './modules/fetchingLikesItems.js';
-import loadRanks from './modules/loadRanks.js';
+import loadAllCard from './modules/loadItemData.js';
 
 const HAMBURGER = document.querySelector('.hamburger');
 const MOBILE_MENU = document.querySelector('.mobile-menu');
@@ -28,21 +26,11 @@ X_BUTTON.addEventListener('click', () => {
 
 spaExperience();
 
-let allItem;
-
-const loadAllCard = async () => {
-  const array = await Promise.all(ids.map(async (id) => fecthingItem(id)));
-  allItem = array.map((item) => item.meals[0]);
-};
-
-await loadAllCard();
+const allItem = await loadAllCard();
 loadItemCard(allItem);
 totalItemsCounter(allItem.length);
 await loadLikes();
 loadContacts();
-const likes = await getLikeItem();
-
-loadRanks(likes, allItem);
 
 window.addEventListener('click', (e) => {
   if (e.target === parmodal) {
