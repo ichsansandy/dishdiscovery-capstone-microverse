@@ -14,7 +14,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Live Demo ](#live-demo)
+  - [🎥 Video Walkthrough ](#video)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -77,9 +78,15 @@ In this project we implement some of the functional we learn through the module 
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="#live-demo"></a>
 
 - [Live Demo Link](https://ichsansandy.github.io/dishdiscovery-capstone-microverse/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Video Walkthrough <a name="#video"></a>
+
+- [Live to video](https://drive.google.com/file/d/1fs_Wz-xS1EbUcLJmyQ0ynJH6fdu8sxpu/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
